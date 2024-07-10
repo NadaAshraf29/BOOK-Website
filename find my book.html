@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(250, 249, 244);
+            background-image: url("IMG\\b3e502224688761798461d40cc97a230.jpg");
+            background-repeat: no-repeat;
+        }
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 455px;
+            margin: 50px auto; /* Center the container horizontally */
+            background-color: #FFCDEA;
+            padding: 20px;
+            border: 1px solid #FFCDEA;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            position: relative;
+            top: 15%;
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p{
+            display: flex;
+        }
+        .question label{
+            display: flex;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .question input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .question .rad{
+            display: flex;
+            margin-top: 10px;
+        }
+        .question .rad label{
+            padding-right: 25px;
+        }
+        .question .rad1{
+            display: flex;
+            margin-top: 10px;
+        }
+        .question .rad1 label{
+            padding-right: 25px;
+        }
+        .question .rad2{
+            display: flex;
+            margin-top: 10px;
+        }
+        .question .rad2 label{
+            padding-right: 25px;
+        }
+        .category-options {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .category-options label {
+            margin-right: 20px;
+            font-size: 16px;
+            display: inline-block; /* Display radio buttons inline */
+        }
+        .container .btn {
+            background-color: #FF3EA5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            vertical-align: top;
+            transition: 0.3s;
+        }
+        .container .btn:hover {
+            background-color: #589a5a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questionnaire</h1>
+        <form id="questionnaire-form">
+            <div class="question">
+                <label for="age">How old are you?</label>
+                <div class="rad">
+                    <input type="radio" name="cat" value="old"><label>7-10</label>
+                    <input type="radio" name="cat" value="old"><label>11-16</label>
+                    <input type="radio" name="cat" value="old"><label>18+</label>
+                </div>
+            </div>
+            <div class="question">
+                <label for="reason">Why do you want to read today?</label>
+                <div class="rad1">
+                    <input type="radio" name="thing" value="read"><label>Free time</label>
+                    <input type="radio" name="thing" value="read"><label>New hobby</label>
+                    <input type="radio" name="thing" value="read"><label>Fun</label>
+                    <input type="radio" name="thing" value="read"><label>knowledge</label>
+                
+                </div>
+            </div>
+            <div class="question">
+                <label for="feelings">How do you feel?</label>
+                <div class="rad2">
+                    <input type="radio" name="feel" value="do"><label>Normal</label>
+                    <input type="radio" name="feel" value="do"><label>Sad</label>
+                    <input type="radio" name="feel" value="do"><label>Excitied</label>
+                    <input type="radio" name="feel" value="do"><label>In love</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>Which category do you prefer?</p>
+                <div class="category-options">
+                    <label><input type="checkbox" name="category" value="romantic"> Romantic</label>
+                    <label><input type="checkbox" name="category" value="science"> Science</label>
+                    <label><input type="checkbox" name="category" value="fiction"> Fiction</label>
+                    <label><input type="checkbox" name="category" value="kids"> Kids</label>
+                    <label><input type="checkbox" name="category" value="disney"> Disney</label>
+                    <label><input type="checkbox" name="category" value="horror"> Horror</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>Which category do you not prefer?</p>
+                <div class="category-options">
+                    <label><input type="checkbox" name="category_not_prefer" value="romantic"> Romantic</label>
+                    <label><input type="checkbox" name="category_not_prefer" value="science"> Science</label>
+                    <label><input type="checkbox" name="category_not_prefer" value="fiction"> Fiction</label>
+                    <label><input type="checkbox" name="category_not_prefer" value="kids"> Kids</label>
+                    <label><input type="checkbox" name="category_not_prefer" value="disney"> Disney</label>
+                    <label><input type="checkbox" name="category_not_prefer" value="horror"> Horror</label>
+                </div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p>Your submission has been received successfully check your email please!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the form is submitted, show the modal
+        document.getElementById("questionnaire-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            modal.style.display = "block";
+            // Redirect to another page after a delay (change "home.html" to the desired page)
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 3000); // Redirect after 3 seconds
+        });
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="try.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <script src="try.js"></script>
+        <title>Home</title>
+        <style>
+            
+            /* Style for logo and navigation */
+            *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            /* Small */
+            @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+            }
+            /* Medium */
+            @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+            }
+            /* Large */
+            @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }}
+            .container{
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header {
+                background-color:rgb(255, 118, 206);
+                color:white;
+                padding: 5px;
+                text-align: center;
+            }
+            header img{
+                position: absolute;
+                left: 40px;
+            }
+            header nav {
+                display: flex;
+                flex: 1;
+                justify-content: flex-end;
+                align-items: center;
+                margin-right: 20px;
+            }
+            header nav ul {
+                display: flex;
+                list-style-type: none;
+            }
+
+            header nav ul li a {
+                padding: 10px 15px;
+                display: block;
+                color: white;
+                font-size: 18px;
+                transition: 0.3s;
+                position: relative;
+                z-index: 2;
+                text-decoration: none;
+            } 
+            .romantic img {
+                    border-radius: 5px;
+                    transition: transform 0.3s ease;
+                }
+
+            /* Hover effect for the images */
+            .romantic img:hover {
+                transform: scale(1.1); /* Scale the image slightly on hover */
+            }
+            .romantic{
+                padding-top: 10px;
+                padding-bottom: 30px;
+            }
+            .romantic .books{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 0fr));
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+            }
+            .container .par p{
+                padding-bottom: 10px;
+            }
+            .container .par span{
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .science{
+                padding-bottom: 30px;
+            }
+            .science img {
+                border-radius: 5px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Hover effect for the images */
+            .science img:hover {
+                transform: scale(1.1); /* Scale the image slightly on hover */
+            }
+            .science .books{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 0fr));
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+            }
+            .disney{
+                padding-bottom: 30px;
+            }
+            .disney img {
+                border-radius: 5px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Hover effect for the images */
+            .disney img:hover {
+                transform: scale(1.1); /* Scale the image slightly on hover */
+            }
+            .disney .books{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 0fr));
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+            }
+            .horror{
+                padding-bottom: 30px;
+            }
+            .horror img {
+                border-radius: 5px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Hover effect for the images */
+            .horror img:hover {
+                transform: scale(1.1); /* Scale the image slightly on hover */
+            }
+            .horror .books{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 0fr));
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+            }
+            .kids{
+                padding-bottom: 30px;
+            }
+            .kids img {
+                border-radius: 5px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Hover effect for the images */
+            .kids img:hover {
+                transform: scale(1.1); /* Scale the image slightly on hover */
+            }
+            .kids .books{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 0fr));
+                padding-top: 10px;
+                padding-bottom: 10px;
+    
+            }
+            .mylist img {
+                border-radius: 5px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Hover effect for the images */
+            .mylist img:hover {
+                transform: scale(1.1); /* Scale the image slightly on hover */
+            }
+            .mylist .books{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 0fr));
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+            }
+            .footer{
+                background-color: #EEF5FF;
+                padding: 10px;
+                text-align: center;
+            }
+            .footer p:not(.copyright) {
+                text-transform: uppercase;
+                padding: 20px;
+                border-bottom: 1px solid white;
+                font-size: 22px;
+                width: fit-content;
+                margin: 20px auto;
+            }
+            .container .par{
+                position: relative;
+                width: 80%;
+                padding: 50px;
+                background-color: rgb(252, 194, 252);
+                color: white;
+                display: flex;
+                justify-content: center;
+            }
+            .par .span{
+                font-size: 20px;
+            }
+           .romantic .books .fas.fa-chevron-right {
+                position: absolute;
+                top: 65%;
+                right: 220px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                opacity: 0;
+                transition: 0.3;
+
+            }
+            .romantic .books:hover .fas.fa-chevron-right {
+                opacity: 1; /* Show the arrow when container is hovered over */ 
+                font-size: 25px;   
+
+            }
+            .science .books .fas.fa-chevron-right {
+                position: absolute;
+                top: 105%;
+                right: 220px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                opacity: 0;
+                transition: 0.3;
+
+            }
+            .science .books:hover .fas.fa-chevron-right {
+                opacity: 1; /* Show the arrow when container is hovered over */ 
+                font-size: 25px;   
+
+            }
+            .horror .books .fas.fa-chevron-right {
+                position: absolute;
+                top: 145%;
+                right: 220px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                opacity: 0;
+                transition: 0.3;
+
+            }
+            .horror .books:hover .fas.fa-chevron-right {
+                opacity: 1; /* Show the arrow when container is hovered over */ 
+                font-size: 25px;   
+
+            }
+            .disney .books .fas.fa-chevron-right {
+                position: absolute;
+                top: 185%;
+                right: 220px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                opacity: 0;
+                transition: 0.3;
+
+            }
+            .disney .books:hover .fas.fa-chevron-right {
+                opacity: 1; /* Show the arrow when container is hovered over */ 
+                font-size: 25px;   
+
+            }
+            .kids .books .fas.fa-chevron-right {
+                position: absolute;
+                top: 225%;
+                right: 220px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                opacity: 0;
+                transition: 0.3;
+
+            }
+            .kids .books:hover .fas.fa-chevron-right {
+                opacity: 1; /* Show the arrow when container is hovered over */ 
+                font-size: 25px;   
+
+            }
+            .mylist .books .fas.fa-chevron-right {
+                position: absolute;
+                top: 265%;
+                right: 220px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                opacity: 0;
+                transition: 0.3;
+
+            }
+            .mylist .books:hover .fas.fa-chevron-right {
+                opacity: 1; /* Show the arrow when container is hovered over */ 
+                font-size: 25px;   
+
+            }
+            .romantic .hidden_book{
+                display: none; /* Initially hide the additional books */
+            }
+            /* CSS for styling the search button and search box */
+.search-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input[type="text"] {
+    width: 200px; /* Adjust width as needed */
+    padding: 8px;
+    border: 1px solid rgb(255, 118, 206);
+    border-radius: 4px ; /* Rounded corners */
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px; /* Adjust width as needed */
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-top: none; /* Hide top border */
+    border-radius: 0 0 4px 4px; /* Rounded corners on the bottom */
+    box-shadow: 0 2px 4px rgb(255, 118, 206);
+    z-index: 1000;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+        </style>
+    </head>
+    <body>
+        <header>
+                <h1>HOME  </h1>        
+            <nav>
+                <ul>
+                    <li><a href="profile.php">My Profile</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="find my book.html">Find my book</a></li>
+                    
+                    <li><a href="ask.html">Ask</a></li>
+                    <li><a href="about us.html">About us</a></li>
+                </ul>
+            </nav>  
+            <div class="search-container">
+                <div class="search-box" id="searchBox">
+                  <input type="text" placeholder="Search..." onclick="toggleDropdown()">
+                  <div class="dropdown-content" id="dropdownContent">
+                    <a href="#">catagores</a>
+                    <a href="#">author</a>
+                    <a href="#">year</a>
+                  </div>
+                </div>
+              </div>
+              
+              <script>  
+            function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdownContent");
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  };
+  
+            
+            </script> 
+        </header>
+        <div class="container">
+            <div class="par">
+                <p> 
+                    <span>"Welcome to Air Plane Mood</span></br> a virtual haven for book enthusiasts and avid readers alike!
+                    We believe that books have the power to transport us to new worlds,
+                    spark our imagination,
+                    and deepen our understanding of the human experience.
+                    Whether you're seeking thrilling adventures, thought-provoking non-fiction,
+                    or heartwarming tales, you've come to the right place.<br><br>
+                    So, grab a cozy blanket, brew a cup of your favorite beverage,
+                    and embark on a literary voyage with us. Discover new worlds,
+                    meet unforgettable characters, and let the power of words weave their magic.
+                    Welcome to air plane mood where 
+                    the pages come alive and the stories never end."
+                </p>
+            </div>
+            <div class="romantic">
+                <div class="next">
+
+                </div>
+                <h1>Romantic</h1>        
+                <div class="books">
+                    <a href="#" class="book-link" data-pdf="BOOKS\twisted love.pdf" >
+                        
+                        <img src="BOOKSCOVERS\twisted love.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\five feet apart.pdf" >
+                        <img src="BOOKSCOVERS\five feet apart.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\the fault in our stars.pdf" >
+                        <img src="BOOKSCOVERS\the fault in our stars.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\the crush.pdf" >
+                        <img src="BOOKSCOVERS\the crush.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\احببت وغدا.pdf" >
+                        <img src="BOOKSCOVERS\احببت وغدا.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="hidden_book" class="book-link" data-pdf="BOOKS\في قلبي انثي عبريه.pdf" >
+                        <img src="BOOKSCOVERS\في قلبي انثي عبريه.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="hidden_book"  class="book-link" data-pdf="BOOKS\هيبتا.pdf">
+                        <img src="هيبتا.jpg" alt="img" width="150" height="200"  class="book-img">
+                    </a>
+                    
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>  
+            </div>      
+            <div class="science">
+                <h1>Science</h1> 
+                <div class="books">
+                    <a href="#" class="book-link" data-pdf="BOOKS\b1.pdf" >
+                        <img src="BOOKSCOVERS\1.jpeg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\b3.pdf" >
+                        <img src="BOOKSCOVERS\3.jpeg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\b4.pdf" >
+                        <img src="BOOKSCOVERS\4.jpeg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\b5.pdf" >
+                        <img src="BOOKSCOVERS\5.jpeg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\b6.pdf" >
+                        <img src="BOOKSCOVERS\6.jpeg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                   
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>  
+            </div>           
+            <div class="horror">
+                <h1>Horror</h1>               
+                <div class="books">
+                    <a href="#" class="book-link" data-pdf="BOOKS\Noor-Book.com  نادر فودة.pdf" >
+                        <img src="BOOKSCOVERS\5dd7257390c979dc83711c0ed0834740.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\Noor-Book.com  نادر فودة 2 كساب.pdf" >
+                        <img src="BOOKSCOVERS\1ab48275fcba1551d43040b84423db97.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\Noor-Book.com  نادر فودة 3 النقش الملعون.pdf" >
+                        <img src="BOOKSCOVERS\5ab1cc9a9dff4408d12b902a2bfef7f3.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\Noor-Book.com  نادر فودة 4.pdf" >
+                        <img src="BOOKSCOVERS\b28a1e6b1cfcac4043fd31fd65df1528.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\Noor-Book.com  نادر فودة 5 العين الثالثة.pdf" >
+                        <img src="BOOKSCOVERS\ed5e674d8e2bed33ddc6b397c828e429.jpg" alt="img" width="150" height="200" class="book-img"> 
+                    </a>
+                    
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>  
+            </div>          
+            <div class="disney">
+                <h1>Disney</h1>
+                <div class="books">
+                    <a href="#" class="book-link" data-pdf="BOOKS\Beauty_and_the_Beast.pdf" >
+                        <img src="BOOKSCOVERS\Beauty_and_the_Beast.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\cinderalle.pdf" >
+                        <img src="BOOKSCOVERS\cinderella.jpg" alt="img" width="150" height="200"class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\princess and the frog.pdf" >
+                        <img src="BOOKSCOVERS\princess and the frog.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\tangled.pdf" >
+                        <img src="BOOKSCOVERS\tangled.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\zotobia.pdf" >
+                        <img src="BOOKSCOVERS\zotobia.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                   
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>  
+            </div>      
+            <div class="kids">
+                <h1>Kids</h1>             
+                <div class="books">
+                    <a href="#" class="book-link" data-pdf="BOOKS\k1.pdf" >
+                        <img src="BOOKSCOVERS\1.png" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\k2.pdf" >
+                        <img src="BOOKSCOVERS\2.jpeg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\k3.pdf" >
+                        <img src="BOOKSCOVERS\3.png" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\k4.pdf" >
+                        <img src="BOOKSCOVERS\4.png" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\k5.pdf" >
+                        <img src="BOOKSCOVERS\5.png" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                   
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>  
+            </div>           
+            <div class="mylist">
+                <h1>My list</h1>               
+                <div class="books">
+                    <a href="#" class="book-link" data-pdf="BOOKS\zotobia.pdf" >
+                        <img src="BOOKSCOVERS\zotobia.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\twisted love.pdf" >
+                        <img src="BOOKSCOVERS\twisted love.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                    <a href="#" class="book-link" data-pdf="BOOKS\هيبتا.pdf" >
+                        <img src="BOOKSCOVERS\هيبتا.jpg" alt="img" width="150" height="200" class="book-img">
+                    </a>
+                 
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>  
+            </div>
+        </div>    
+        <script>
+            // Select all elements with the class .books
+            document.querySelectorAll(".books").forEach(function(booksContainer) {
+                // Attach event listener to each .books container
+                booksContainer.addEventListener("click", function(event) {
+                    // Check if the clicked element is a book image
+                    if (event.target.classList.contains("book-img")) {
+                        // Prevent the default link behavior
+                        event.preventDefault();
+                        
+                        // Get the PDF filename from the data-pdf attribute
+                        var pdf = event.target.parentNode.getAttribute("data-pdf");
+                        
+                        // Open the PDF file in a new tab
+                        window.open(pdf, "_blank");
+                    }
+                });
+            });
+        </script>
+        <footer>
+            <div class="footer">
+                
+                  <p>Books</p>
+                  <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fas fa-home"></i>
+                    <i class="fab fa-linkedin"></i>
+                  </div>
+                  <p class="copyright">&copy; 2024 <span>Home</span> All Right Reserved</p>
+                
+              
+        </footer>
+
+    </body>
+</html>

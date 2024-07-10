@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("IMG\\dc560489f59974c07485644d55b1248c.jpg");
+            margin: 0;
+            padding: 40px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #F1EAFF;
+            
+                }
+        .registration-container {
+            width: 350px;
+            padding: 16px;
+            background-color: white;
+            margin: 50px 0px 10px 950px; /* Set top margin to 100px and left/right margins to auto */
+
+            box-shadow: 0px 0px 10px 0px rgb(255, 62, 165);
+            display: inline-block;
+            align-items: center;
+        }
+        .registration-container h1 {
+            text-align: center;
+            margin-bottom: 24px;
+            color:rgb(255, 62, 165);
+
+        }
+        .registration-container input[type="text"],
+        .registration-container input[type="email"],
+        .registration-container input[type="password"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        .registration-container button {
+            width: 100%;
+            padding: 12px;
+            background-color:rgb(255, 62, 165);
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .registration-container button:hover {
+            background-color:rgb(255, 62, 165);
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+            
+            
+        }
+        .register-link a {
+            color:rgb(255, 62, 165);
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+  <form action="registration.php" method="post">
+    <div class="registration-container ">
+      <h1 style = "text-align: center;">Register</h1>
+      <p style ="text-align: center;">Please fill in this form to create an account.</p>
+      <hr>
+  
+      <input type="text" name="name" placeholder="Enter Name" required>
+      <input type="text" placeholder="Enter Email" name="email" required>
+   
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <hr>
+      <p style="text-align: center;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+  
+      <button type="submit" name="submit" class="register-link" style="text-align :center;">Register</button>
+    
+    
+    <div class="register-link">
+      <p>Already have an account? <a href="login.html"><strong > Sign in</strong></a>.</p>
+    </div>
+</div>
+  </form>
+  
+
+</body>
+</html>
